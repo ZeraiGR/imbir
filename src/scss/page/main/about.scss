@@ -1,0 +1,41 @@
+.about {
+    margin-bottom: rem(75);
+}
+
+.about__content {
+    padding: rem(45) rem(50);
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    display: flex;
+    gap: rem(45);
+}
+
+.about__title {
+    margin-bottom: rem(30);
+}
+
+.about__descr {
+    margin-bottom: rem(35);
+}
+
+.about__text {
+    font-weight: 500;
+    line-height: 1.75;
+
+    &:not(:last-child) {
+        margin-bottom: rem(25);
+    }
+}
+
+.about__link {
+    min-width: rem(195);
+    padding: rem(18) rem(20);
+}
+
+.about__image {
+    max-width: rem(380);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}

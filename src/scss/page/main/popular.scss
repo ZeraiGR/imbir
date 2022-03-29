@@ -1,0 +1,79 @@
+.popular {
+    margin-bottom: rem(80);
+}
+
+.popular__title {
+    margin-bottom: rem(45);
+}
+
+.pupular__list {
+    margin-bottom: rem(75);
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(30);
+    list-style: none;
+}
+
+.pupular__item {
+    max-width: calc(33% - 20px);
+
+    &:nth-child(4),
+    &:nth-child(5) {
+        margin: rem(25) 0 rem(15);
+        max-width: calc(50% - 15px);
+        width: 100%;
+    }
+
+    &--discount {
+        margin-top: rem(45);
+        padding: rem(75) 0 rem(65);
+        width: 100%;
+        background-color: $second;
+        color: #ffffff;
+        border-radius: 20px;
+        text-align: center;
+
+        .card__value {
+            display: block;
+        }
+    }
+}
+
+.pupular__btn {
+    display: none;
+    background-image: none;
+    background-color: transparent;
+    border: 1px solid $accent;
+    color: $mainColor;
+
+    &.active {
+        display: block;
+    }
+}
+
+.banner {
+    padding: rem(75) 0 rem(65);
+    display: block;
+    background-color: $second;
+    border-radius: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.banner__headline {
+    margin-bottom: rem(30);
+    @include adaptiveValue('font-size', 28, 22);
+}
+
+.banner__value {
+    margin-bottom: rem(15);
+    display: block;
+    @include adaptiveValue('font-size', 100, 60);
+}
+
+.banner__descr {
+    margin: 0 auto;
+    max-width: rem(250);
+    line-height: 1.5;
+    @include adaptiveValue('font-size', 18, 16);
+}

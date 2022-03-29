@@ -1,0 +1,32 @@
+.newsline-slider {
+}
+
+.newsline-slider__slider {
+}
+
+.newsline-slider__swiper {
+}
+
+.newsline-slider__slide {
+    transform: translateX(80%);
+}
+
+.newsline-slider__link {
+    @include adaptiveValue('max-width', 250, 135);
+    @include adaptiveValue('height', 250, 135);
+    display: block;
+}
+
+.newsline-slider__image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.newsline-slider__slide--banner {
+}
+
+.newsline-slider__name {
+}
+
+.newsline-slider__value {
+}

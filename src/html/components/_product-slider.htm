@@ -1,0 +1,80 @@
+<section class="product-slider">
+	<div class="product-slider__container">
+		<h2 class="product-slider__title title">@@title</h2>
+
+		<div class="product-slider__slider">
+			<ul class="product-slider__swiper">
+				<li class="product-slider__slide">
+					@@include('_card--product.htm',{
+					"category": "Категория",
+					"discount": "-25%",
+					"link": "#",
+					"images": "img/products/product-1.jpg",
+					"name": "Смесь специй",
+					"weight": "65 гр",
+					"new": "30 EUR",
+					"old": "150 EUR"
+					})
+				</li>
+
+				<li class="product-slider__slide">
+					@@include('_card--product.htm',{
+					"category": "Категория",
+					"discount": "-15%",
+					"link": "#",
+					"images": "img/products/product-2.jpg",
+					"name": "Домашняя паста со шпинатом",
+					"weight": "200 гр",
+					"new": "58 EUR",
+					"old": "65 EUR"
+					})
+				</li>
+
+				<li class="product-slider__slide">
+					@@include('_card--product.htm',{
+					"category": "Категория",
+					"discount": "-25%",
+					"link": "#",
+					"images": "img/products/product-3.jpg",
+					"name": "Фалафель",
+					"weight": "200 гр",
+					"new": "50 EUR",
+					"old": "60 EUR"
+					})
+				</li>
+
+				<li class="product-slider__slide">
+					@@include('_card--product.htm',{
+					"category": "Категория",
+					"discount": "-25%",
+					"link": "#",
+					"images": "img/products/product-1.jpg",
+					"name": "Смесь специй",
+					"weight": "65 гр",
+					"new": "30 EUR",
+					"old": "150 EUR"
+					})
+				</li>
+
+				<li class="product-slider__slide">
+					@@include('_card--product.htm',{
+					"category": "Категория",
+					"discount": "-15%",
+					"link": "#",
+					"images": "img/products/product-2.jpg",
+					"name": "Домашняя паста со шпинатом",
+					"weight": "200 гр",
+					"new": "58 EUR",
+					"old": "65 EUR"
+					})
+				</li>
+			</ul>
+
+			<div class="product-slider__pagination"></div>
+		</div>
+
+		<div class="product-slider__arrow product-slider__arrow--prev"></div>
+		<div class="product-slider__arrow product-slider__arrow--next"></div>
+	</div>
+
+</section>

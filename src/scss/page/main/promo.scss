@@ -1,0 +1,133 @@
+.promo {
+    margin-bottom: rem(100);
+
+    .promo__swiper {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: rem(15);
+    }
+}
+
+.promo__slide {
+    position: relative;
+    z-index: 2;
+    min-height: rem(210);
+    color: #ffffff;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.49) 100%
+        );
+        border-radius: 20px;
+        content: '';
+    }
+
+    &--discount {
+        .promo__link {
+            padding: rem(25) rem(5) rem(20);
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+        }
+
+        &::after {
+            background: none;
+        }
+
+        background-color: $second;
+    }
+
+    &:nth-child(1) {
+        grid-column: 1 / 4;
+        grid-row: 1 / 3;
+
+        .promo__name {
+            @include adaptiveValue('font-size', 28, 20);
+        }
+    }
+
+    &:nth-child(2) {
+        grid-column: 4 / 6;
+        grid-row: 1 / 2;
+    }
+
+    &:nth-child(3) {
+        grid-column: 6 / 7;
+        grid-row: 1 / 2;
+    }
+
+    &:nth-child(4) {
+        grid-column: 4 / 7;
+        grid-row: 2 / 3;
+    }
+}
+
+.promo__link {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: rem(30);
+
+    &:hover {
+        .promo__more {
+            color: $second;
+        }
+
+        .promo__arrow {
+            fill: $second;
+        }
+    }
+}
+
+.promo__name {
+    margin-bottom: rem(20);
+    font-size: rem(20);
+    line-height: 1.1;
+}
+
+.promo__more {
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    font-size: rem(15);
+    transition: color 0.3s ease;
+}
+
+.promo__arrow {
+    margin-left: rem(10);
+    width: rem(25);
+    height: rem(25);
+    fill: #ffffff;
+    transition: fill 0.3s ease;
+}
+
+.promo__headline {
+    @include adaptiveValue('font-size', 17, 22);
+    @include adaptiveValue('margin-bottom', 18, 15);
+}
+
+.promo__value {
+    margin-bottom: rem(10);
+    @include adaptiveValue('font-size', 50, 60);
+}
+
+.promo__descr {
+    max-width: 80%;
+    @include adaptiveValue('font-size', 13, 16);
+    line-height: 1.5;
+}

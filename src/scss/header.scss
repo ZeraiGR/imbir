@@ -1,0 +1,148 @@
+//====================================================================================================
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 5;
+        span,
+        &::before,
+        &::after {
+            content: '';
+            transition: all 0.3s ease 0s;
+            left: 0px;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+        }
+        &::before {
+            top: 0px;
+        }
+        &::after {
+            bottom: 0px;
+        }
+        span {
+            top: calc(50% - 1px);
+        }
+        .menu-open & {
+            span {
+                transform: scale(0);
+            }
+            &::before {
+                transform: rotate(-45deg);
+                top: calc(50% - 1px);
+            }
+            &::after {
+                transform: rotate(45deg);
+                bottom: calc(50% - 1px);
+            }
+        }
+    }
+}
+
+.header {
+}
+
+.header__container {
+}
+
+.header__nav {
+    padding: rem(16) 0 rem(22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+}
+
+.menu__icon {
+}
+
+.icon-menu {
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    &:not(:last-child) {
+        margin-right: rem(30);
+    }
+}
+
+.menu__link {
+    font-size: rem(15);
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $second;
+    }
+}
+
+.logo {
+}
+
+.header__logo {
+}
+
+.menu__shop {
+    display: flex;
+    align-items: center;
+
+    .menu__link {
+        margin-right: rem(50);
+    }
+}
+
+.menu__link--basket {
+    position: relative;
+    background-image: url(@img/icons/icon-basket.svg);
+    background-size: 22px 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: rem(60);
+    height: rem(60);
+    background-color: #ececec;
+    border-radius: 50%;
+}
+
+.menu__counter {
+    position: absolute;
+    right: 0;
+    color: #ffffff;
+    background-color: #f08f8e;
+    border-radius: 15px;
+    padding: 0 5px;
+    min-width: 15px;
+    line-height: 15px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.menu__price {
+    margin-right: rem(45);
+}
+
+.socials {
+    display: flex;
+}
+
+.socials__item {
+    &:not(:last-child) {
+        margin-right: rem(20);
+    }
+}
+
+.socials__link {
+}
