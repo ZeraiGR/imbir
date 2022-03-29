@@ -2,7 +2,7 @@
 
 .title {
     position: relative;
-    padding-bottom: rem(20);
+    padding-bottom: rem(25);
     @include adaptiveValue('font-size', 28, 22);
 
     &::after {

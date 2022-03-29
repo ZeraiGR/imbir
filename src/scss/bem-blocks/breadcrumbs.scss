@@ -1,0 +1,33 @@
+.recipes {
+    .breadcrumbs {
+        margin-bottom: rem(30);
+    }
+}
+
+.breadcrumbs {
+    font-weight: 500;
+    font-size: rem(13);
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        position: relative;
+        margin-right: rem(5);
+        padding-right: rem(10);
+
+        a {
+            text-decoration: underline;
+        }
+
+        &:not(:last-child) {
+            &::after {
+                position: absolute;
+                right: 0;
+                content: '/';
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.recipe {
+    padding: rem(18) 0 rem(60);
+
+    .breadcrumbs {
+        @include adaptiveValue('margin-bottom', 25, 18);
+    }
+}
+
+.recipe__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(30);
+}
+
+.recipe__title {
+    max-width: 65%;
+    width: 100%;
+    @include adaptiveValue('margin-bottom', 45, 30);
+    @include cut-text(3);
+    line-height: 1.4;
+}
+
+.recipe__lang {
+}
+
+.recipe__content {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(30);
+}
+
+.recipe__main {
+    max-width: 65%;
+    width: 100%;
+
+    p {
+        margin: rem(30) 0;
+        line-height: 1.7;
+    }
+}
+
+.recipe__sidebar {
+    @include adaptiveValue('padding', 32, 22);
+    background-color: #f4f4f4;
+    border-radius: 20px;
+}

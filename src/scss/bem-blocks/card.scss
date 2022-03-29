@@ -1,5 +1,15 @@
 .card {
     position: relative;
+
+    &--recipe {
+        .card__top {
+            @include adaptiveValue('margin-bottom', 16, 13);
+        }
+
+        .card__name {
+            @include adaptiveValue('font-size', 18, 14);
+        }
+    }
 }
 
 .card__link {
@@ -32,6 +42,15 @@
     transition: opacity 0.5s ease;
 }
 
+.card__top {
+    margin-bottom: rem(12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(15);
+    line-height: 1.3;
+}
+
 .card__discount {
     position: absolute;
     z-index: 2;
@@ -49,16 +68,55 @@
 }
 
 .card__category {
-    margin-bottom: rem(12);
     display: block;
     color: $accent;
     font-size: rem(13);
     text-decoration: underline;
+    @include cut-text(2);
+}
+
+.card__date {
+    max-width: 35%;
+    text-align: right;
+    width: 100%;
+    color: #a2a2a2;
+    font-size: rem(13);
+    @include cut-text(2);
+}
+
+.card__stats {
+    margin-bottom: rem(15);
+    display: flex;
+    align-items: center;
+    font-size: rem(14);
+}
+
+.card__stat {
+    padding-left: rem(30);
+    padding: rem(5) 0 rem(5) rem(30);
+    background-repeat: no-repeat;
+    background-size: rem(21);
+    background-position: center left;
+
+    &--comments {
+        background-image: url('@img/icons/icon-comment.svg');
+    }
+
+    &--views {
+        background-image: url('@img/icons/icon-look.svg');
+    }
+
+    &:not(:last-child) {
+        margin-right: rem(17);
+    }
 }
 
 .card__name {
     margin-bottom: rem(8);
+    max-width: 85%;
     @include adaptiveValue('font-size', 15, 14);
+    line-height: 1.4;
+    @include cut-text(3);
 }
 
 .card__weight {

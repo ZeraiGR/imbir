@@ -1,0 +1,39 @@
+.pagination {
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: rem(15);
+    }
+
+    li {
+        font-weight: 500;
+        width: rem(43);
+        height: rem(43);
+        border-radius: 50%;
+        border: 1px solid #dddddd;
+        transition: border-color 0.3s;
+
+        &.current {
+            background-color: $accent;
+            color: #ffffff;
+            border-color: transparent;
+
+            &:hover {
+                border-color: transparent;
+            }
+        }
+
+        &:hover {
+            border-color: #bdbcbc;
+        }
+    }
+
+    a {
+        padding-top: rem(1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
