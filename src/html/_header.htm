@@ -5,34 +5,38 @@
 				<span>
 					<span class="sr-only">Бургер меню</span>
 				</span>
+				<span class="icon-menu__bg"></span>
 			</button>
-			<ul class="menu__list">
-				<li class="menu__item">
-					<a class="menu__link" href="№">
-						Главная
-					</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="№">
-						Рецепты
-					</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="№">
-						Обо мне
-					</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="№">
-						Контакты
-					</a>
-				</li>
-			</ul>
+			<div class="menu__mobile">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a class="menu__link" href="№">
+							Главная
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="№">
+							Рецепты
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="№">
+							Обо мне
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="№">
+							Контакты
+						</a>
+					</li>
+				</ul>
+			</div>
+
 			<a class="logo header__logo" href="#">
 				<img class="logo__img" src="@img/icons/logo.svg" alt="logo">
 			</a>
 			<div class="menu__shop">
-				<a class="menu__link" href="#">
+				<a class="menu__link menu__link--shop" href="#" data-da=".menu__mobile, 768, 3">
 					Магазин
 				</a>
 				<a class="menu__link menu__link--basket" href="#">
@@ -46,15 +50,19 @@
 				<span class="menu__price">
 					2 300 EUR
 				</span>
-				<ul class="socials">
+				<ul class="socials" data-da=".menu__mobile, 768, 2">
 					<li class="socials__item">
 						<a class="socials__link" href="#">
-							<img src="@img/icons/icon-facebook.svg" alt="facebook">
+							<svg class="socials__icon socials__icon--facebook">
+								<use xlink:href="@img/icons/sprite.svg#icon-facebook"></use>
+							</svg>
 						</a>
 					</li>
 					<li class="socials__item">
 						<a class="socials__link" href="#">
-							<img src="@img/icons/icon-insta.svg" alt="facebook">
+							<svg class="socials__icon socials__icon--insta">
+								<use xlink:href="@img/icons/sprite.svg#icon-insta"></use>
+							</svg>
 						</a>
 					</li>
 				</ul>

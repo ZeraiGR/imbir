@@ -2,6 +2,27 @@
     @include adaptiveValue('margin-bottom', 70, 50);
 }
 
+.newsline-slider__mobile-offer {
+    display: none;
+
+    @media (max-width: $mobile) {
+        margin-bottom: rem(36);
+        display: block;
+        text-align: center;
+    }
+}
+
+.newsline-slider__heading {
+    margin: 0 auto rem(15);
+    font-size: rem(22);
+    max-width: 70%;
+}
+
+.newsline-slider__descr {
+    color: $accent;
+    font-size: rem(18);
+}
+
 .newsline-slider__slider {
 }
 
@@ -15,12 +36,13 @@
 }
 
 .newsline-slider__link {
+    display: block;
 }
 
 .newsline-slider__image {
     object-fit: cover;
-    @include adaptiveValue('max-width', 250, 130);
-    @include adaptiveValue('height', 250, 130);
+    max-width: rem(250px);
+    @include adaptiveValue('height', 250, 150);
     width: 100%;
 }
 
@@ -31,6 +53,10 @@
     padding: rem(5) rem(20);
     background-color: $accent;
     color: #ffffff;
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
 }
 
 .newsline-slider__name {

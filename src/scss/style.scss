@@ -58,6 +58,12 @@ body {
         overflow: hidden;
         touch-action: none;
     }
+
+    .menu-open & {
+        .menu__mobile {
+            left: 0;
+        }
+    }
     // Сайт загружен
     .loaded & {
     }

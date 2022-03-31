@@ -3,43 +3,56 @@
 }
 
 .faq__container {
+    @media (max-width: $mobile) {
+        padding: 0;
+    }
 }
 
 .faq__content {
     @include adaptiveValue('padding-top', 80, 50);
     @include adaptiveValue('padding-left', 50, 20);
     @include adaptiveValue('padding-right', 50, 20);
-    @include adaptiveValue('padding-bottom', 60, 50);
+    @include adaptiveValue('padding-bottom', 60, 25);
     background-color: #f4f4f4;
     border-radius: 20px;
+
+    @media (max-width: $mobile) {
+        border-radius: 0;
+    }
 }
 
 .faq__title {
     @include adaptiveValue('margin-bottom', 55, 30);
+    padding-bottom: rem(30);
+
+    @media (max-width: $mobile) {
+        text-align: center;
+
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
 
 .faq__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rem(45) rem(50);
-}
 
-.faq__spollers {
-}
-
-.spollers {
-}
-
-.spollers__item {
+    @media (max-width: $mobile) {
+        grid-template-columns: 100%;
+        gap: rem(25) rem(50);
+    }
 }
 
 .spollers__title {
     position: relative;
-    margin-bottom: rem(20);
+    margin-bottom: rem(25);
     padding-left: rem(54);
     text-align: left;
     @include adaptiveValue('font-size', 20, 18);
-    line-height: 1.45;
+    line-height: 1.4;
 
     &._spoller-active {
         &::before {
@@ -67,5 +80,9 @@
 }
 
 .spollers__body {
-    line-height: 1.8;
+    line-height: 1.75;
+
+    @media (max-width: $mobile) {
+        text-align: center;
+    }
 }

@@ -1,40 +1,85 @@
 .popular {
-    margin-bottom: rem(80);
+    @include adaptiveValue('margin-bottom', 80, 50);
 }
 
 .popular__title {
     margin-bottom: rem(45);
+    padding-bottom: rem(25);
 }
 
 .pupular__list {
     margin-bottom: rem(75);
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: rem(30);
     list-style: none;
+
+    @media (max-width: em(525)) {
+        margin-bottom: rem(35);
+    }
 }
 
 .pupular__item {
     max-width: calc(33% - 20px);
+
+    &.hide {
+        display: none;
+    }
 
     &:nth-child(4),
     &:nth-child(5) {
         margin: rem(25) 0 rem(15);
         max-width: calc(50% - 15px);
         width: 100%;
+
+        .card__img {
+            min-height: rem(585);
+        }
+
+        @media (max-width: $tablet) {
+            margin: 0;
+            max-width: calc(33% - 20px);
+
+            .card__img {
+                min-height: rem(280);
+                height: rem(280);
+            }
+        }
+
+        @media (max-width: $mobile) {
+            max-width: calc(50% - 15px);
+            width: 100%;
+        }
+
+        @media (max-width: em(525)) {
+            max-width: 100%;
+
+            .card__img {
+                height: rem(335);
+            }
+        }
     }
 
-    &--discount {
-        margin-top: rem(45);
-        padding: rem(75) 0 rem(65);
-        width: 100%;
-        background-color: $second;
-        color: #ffffff;
-        border-radius: 20px;
-        text-align: center;
+    @media (max-width: $tablet) {
+        margin: 0;
+        max-width: calc(33% - 20px);
 
-        .card__value {
-            display: block;
+        .card__img {
+            height: rem(280);
+        }
+    }
+
+    @media (max-width: $mobile) {
+        max-width: calc(50% - 15px);
+        width: 100%;
+    }
+
+    @media (max-width: em(525)) {
+        max-width: 100%;
+
+        .card__img {
+            height: rem(335);
         }
     }
 }
@@ -45,8 +90,11 @@
     background-color: transparent;
     border: 1px solid $accent;
     color: $mainColor;
+    width: 100%;
 
     &.active {
+        margin-bottom: rem(60);
+        padding: rem(16) rem(20);
         display: block;
     }
 }
@@ -58,6 +106,10 @@
     border-radius: 20px;
     color: #ffffff;
     text-align: center;
+
+    @media (max-width: $mobile) {
+        padding: rem(45) 0 rem(35);
+    }
 }
 
 .banner__headline {

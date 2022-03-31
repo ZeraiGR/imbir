@@ -2,7 +2,7 @@
 
 .title {
     position: relative;
-    padding-bottom: rem(25);
+    padding-bottom: rem(16);
     @include adaptiveValue('font-size', 28, 22);
 
     &::after {
@@ -29,5 +29,22 @@
 
     &:hover {
         background-color: $second;
+    }
+}
+
+.dots {
+    .swiper-pagination-bullet {
+        width: rem(9);
+        height: rem(9);
+        border-radius: 50%;
+        background-color: #e5e5e5;
+
+        &.swiper-pagination-bullet-active {
+            background-color: $accent;
+        }
+
+        &:not(:last-child) {
+            margin-right: rem(9);
+        }
     }
 }
