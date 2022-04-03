@@ -7,16 +7,20 @@
 .breadcrumbs {
     font-weight: 500;
     font-size: rem(13);
+    text-align: center;
 
     ul {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        row-gap: rem(5);
     }
 
     li {
         position: relative;
         margin-right: rem(5);
         padding-right: rem(10);
+        line-height: 1.3;
 
         a {
             text-decoration: underline;

@@ -61,7 +61,7 @@ body {
 
     .menu-open & {
         .menu__mobile {
-            left: 0;
+            transform: translateX(0);
         }
     }
     // Сайт загружен
@@ -166,7 +166,12 @@ body {
 @import 'bem-blocks/breadcrumbs.scss';
 @import 'bem-blocks/pagination.scss';
 @import 'bem-blocks/faq.scss';
+@import 'bem-blocks/comments.scss';
+@import 'bem-blocks/aboutme.scss';
+@import 'bem-blocks/contact.scss';
+@import 'bem-blocks/shop.scss';
 @import 'page/main/promo.scss';
 @import 'page/recipe/recipe.scss';
+@import 'page/recipe/similar.scss';
 @import 'page/main/about.scss';
 @import 'page/main/popular.scss';

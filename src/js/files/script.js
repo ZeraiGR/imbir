@@ -53,4 +53,14 @@ const hideElems = (cards, counter) => {
     }
 };
 
+const scrollMenu = () => {
+    const menu = document.querySelector('.recipes__menu');
+
+    if (menu) {
+        console.log(menu.offsetWidth);
+        menu.style.width = `${menu.offsetWidth}px`;
+    }
+};
+
 loadMore();
+scrollMenu();

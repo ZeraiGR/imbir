@@ -1,11 +1,9 @@
 .recipes {
     padding: rem(10) 0 rem(80);
-}
 
-.recipes__container {
-}
-
-.title {
+    @media (max-width: $mobile) {
+        padding: rem(10) 0 rem(50);
+    }
 }
 
 .recipes__title {
@@ -18,21 +16,27 @@
     }
 }
 
-.recipes__content {
+.recipes__mobile {
+    overflow: auto;
 }
 
 .recipes__menu {
+    max-width: 100%;
     @include adaptiveValue('margin-bottom', 50, 30);
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: rem(13);
+
+    @media (max-width: em(1366)) {
+        justify-content: flex-start;
+    }
 }
 
 .recipes__menu-item {
     border-radius: 90px;
     background-color: #ececec;
     color: #a2949c;
+    white-space: nowrap;
 
     &.active {
         background-color: $accent;
@@ -45,15 +49,29 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(50) rem(30);
+
+    @media (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $mobile) {
+        gap: rem(32) rem(25);
+    }
 }
 
 .recipes__item {
+    @media (max-width: $mobileSmall) {
+        .card__box {
+            margin-bottom: rem(22);
+        }
+
+        .card__name {
+            @include cut-text(4);
+        }
+    }
 }
 
 .recipes__link {
     padding: rem(16) rem(20);
     display: block;
-}
-
-.recipes__list {
 }

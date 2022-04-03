@@ -1,0 +1,160 @@
+.comments-area {
+    margin-bottom: rem(55);
+
+    @media (max-width: $mobileSmall) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comment {
+        ol {
+            padding-left: rem(78);
+
+            @media (max-width: $mobile) {
+                padding-left: rem(25);
+            }
+        }
+    }
+
+    .comments-title {
+        @include adaptiveValue('margin-bottom', 25, 30);
+        @include adaptiveValue('font-size', 20, 22);
+    }
+
+    .logged-in-as {
+        margin-bottom: rem(10);
+        font-size: rem(14);
+    }
+
+    .comment-reply-title,
+    .comment-form-comment label,
+    .says {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    .comment-body {
+        margin-bottom: rem(35);
+        padding-bottom: rem(25);
+        border-bottom: 1px solid #dfdfdf;
+    }
+
+    .comment-meta {
+        margin-bottom: rem(20);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fn {
+        padding-top: rem(5);
+    }
+
+    .comment-author {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .avatar {
+        margin-right: rem(25);
+        width: rem(55);
+        height: rem(55);
+        object-fit: cover;
+    }
+
+    .comment-metadata {
+        margin-top: rem(-25);
+        margin-left: rem(78);
+
+        time {
+            margin-right: rem(30);
+            font-size: rem(13);
+            color: #9f9a9d;
+        }
+    }
+
+    .comment-edit-link,
+    .comment-reply-link {
+        color: #f08f8e;
+        text-decoration: underline;
+        font-size: rem(14);
+    }
+
+    .comment-content {
+        margin-bottom: rem(16);
+        @include adaptiveValue('font-size', 16, 13);
+
+        p {
+            line-height: 1.7;
+        }
+    }
+
+    .comment-content,
+    .reply {
+        margin-left: rem(78);
+    }
+
+    .comment-list {
+        list-style: none;
+
+        ol {
+            list-style: none;
+        }
+    }
+
+    .comment-form-comment {
+        margin-bottom: rem(20);
+
+        textarea {
+            padding: rem(14) rem(26);
+            width: 100% !important;
+            min-height: rem(82) !important;
+            resize: vertical;
+            background-color: #f4f4f4;
+            border: 1px solid #e3e3e3;
+            border-radius: 3px;
+
+            &::placeholder {
+                font-size: rem(14);
+                color: #b4b3b3;
+            }
+        }
+    }
+
+    .form-submit {
+        .submit {
+            padding: rem(16) rem(30);
+            background-color: $accent;
+            color: #ffffff;
+            font-size: rem(14);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: $second;
+            }
+
+            @media (max-width: $mobileSmall) {
+                padding: rem(19) rem(30);
+                width: 100%;
+            }
+        }
+    }
+}
+
+.comment-respond {
+    margin-bottom: rem(45);
+
+    @media (max-width: $mobileSmall) {
+        margin-bottom: 0;
+        order: 3;
+    }
+}
