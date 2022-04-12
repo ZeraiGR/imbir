@@ -1,6 +1,7 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
 // import { isMobile } from "./functions.js";
 // import { formsModules } from "./forms/forms.js";
+import { bodyLock, bodyUnlock } from './functions.js';
 
 export function headerFixed() {
     const header = document.querySelector('.header'),
@@ -56,11 +57,60 @@ const hideElems = (cards, counter) => {
 const scrollMenu = () => {
     const menu = document.querySelector('.recipes__menu');
 
-    if (menu) {
+    if (menu && document.documentElement.clientWidth < 768) {
         console.log(menu.offsetWidth);
         menu.style.width = `${menu.offsetWidth}px`;
     }
 };
 
+const filterHandler = () => {
+    const filterBtn = document.querySelector('.shop__toggle'),
+        filterPanel = document.querySelector('.shop__sidebar');
+
+    if (filterBtn && filterPanel) {
+        filterBtn.addEventListener('click', function () {
+            filterBtn.classList.toggle('active');
+            filterPanel.classList.toggle('active');
+        });
+    }
+};
+
+const basketHandler = () => {
+    const basketBtn = document.querySelector('.menu__link--basket'),
+        basketMenu = document.querySelector('.menu__basket-info'),
+        root = document.documentElement;
+
+    if (basketBtn && basketMenu) {
+        basketBtn.addEventListener('click', function () {
+            if (!root.classList.contains('menu-open')) {
+                basketMenu.classList.toggle('active');
+                if (document.documentElement.clientWidth <= 992) {
+                    root.classList.add('basket-open');
+                    bodyLock();
+                }
+            }
+        });
+
+        window.addEventListener('click', (e) => {
+            let target = e.target;
+
+            if (
+                !target.closest('.menu__basket-info') &&
+                !target.closest('.menu__link--basket')
+            ) {
+                if (!root.classList.contains('menu-open')) {
+                    basketMenu.classList.remove('active');
+                    if (document.documentElement.clientWidth <= 992) {
+                        root.classList.remove('basket-open');
+                        bodyUnlock();
+                    }
+                }
+            }
+        });
+    }
+};
+
 loadMore();
 scrollMenu();
+filterHandler();
+basketHandler();

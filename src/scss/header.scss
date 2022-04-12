@@ -117,7 +117,7 @@
         align-items: center;
         padding: rem(145) rem(20) rem(40);
         background-color: #ffffff;
-        box-shadow: 0px 4px 13px rgba(30, 35, 66, 0.11);
+        box-shadow: 0 4px 13px rgba(30, 35, 66, 0.11);
     }
 }
 
@@ -142,6 +142,146 @@
             margin-right: 0;
         }
     }
+}
+
+.menu__basket {
+    position: relative;
+    margin-right: rem(20);
+
+    @media (max-width: $tablet) {
+        position: static;
+    }
+
+    @media (max-width: $mobile) {
+        margin-right: 0;
+    }
+}
+
+.menu__basket-info {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    top: calc(100% + rem(25));
+    left: 50%;
+    transform: translate(-50%);
+    padding: rem(20);
+    border-radius: 20px;
+
+    &.active {
+        display: block;
+    }
+
+    &:before,
+    &::after {
+        position: absolute;
+        content: '';
+        background-color: #ffffff;
+        backdrop-filter: blur(14px);
+        box-shadow: 0 4px 13px rgba(30, 35, 66, 0.11);
+    }
+
+    &::before {
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    &::after {
+        z-index: -1;
+        top: rem(-13);
+        left: 50%;
+        width: rem(50);
+        height: rem(50);
+        transform: translateX(-50%) rotate(45deg);
+        border-radius: 5px;
+    }
+
+    .quantity__button,
+    .quantity__head,
+    .card__price {
+        display: none;
+    }
+
+    .menu__basket-item {
+        .card__img {
+            width: rem(53);
+            height: rem(53);
+        }
+    }
+
+    .card {
+        margin-bottom: rem(20);
+        padding: rem(10) rem(15) rem(10) rem(10);
+        border: 1px solid #dddddd;
+
+        .card__box {
+            max-width: 50%;
+            gap: rem(11);
+        }
+
+        .card__category {
+            margin-bottom: rem(10);
+            font-size: rem(11);
+        }
+
+        .card__name {
+            font-size: rem(13);
+            @include cut-text(2);
+        }
+
+        .card__weight {
+            font-size: rem(10);
+        }
+    }
+
+    @media (max-width: $tablet) {
+        position: fixed;
+        z-index: 8;
+        top: 0;
+        right: 0;
+        left: auto;
+        transform: translateX(100%);
+        display: block;
+        width: 70%;
+        height: 100%;
+        background-color: #ffffff;
+        transition: transform 0.3s ease;
+        border-radius: 0;
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        @media (max-width: $mobileSmall) {
+            width: 90%;
+        }
+    }
+}
+
+.menu__basket-total,
+.menu__basket-btn {
+    position: relative;
+    z-index: 1;
+    line-height: 1.4;
+}
+
+.menu__basket-total {
+    margin-bottom: rem(20);
+    text-align: center;
+    font-size: rem(14);
+}
+
+.menu__basket-btn {
+    width: 100%;
+    font-size: rem(14);
 }
 
 .menu__link {
@@ -213,17 +353,14 @@
         margin-right: rem(50);
 
         &--basket {
-            margin-right: rem(20);
-
-            @media (max-width: $mobile) {
-                margin-right: 0;
-            }
+            margin-right: 0;
         }
     }
 }
 
 .menu__counter {
     position: absolute;
+    top: 0;
     right: 0;
     color: #ffffff;
     background-color: #f08f8e;

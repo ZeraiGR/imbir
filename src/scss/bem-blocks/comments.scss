@@ -112,11 +112,11 @@
     .comment-form-comment {
         margin-bottom: rem(20);
 
-        textarea {
+        textarea,
+        input {
             padding: rem(14) rem(26);
             width: 100% !important;
-            min-height: rem(82) !important;
-            resize: vertical;
+
             background-color: #f4f4f4;
             border: 1px solid #e3e3e3;
             border-radius: 3px;
@@ -126,11 +126,17 @@
                 color: #b4b3b3;
             }
         }
+
+        textarea {
+            min-height: rem(82) !important;
+            resize: vertical;
+        }
     }
 
     .form-submit {
         .submit {
             padding: rem(16) rem(30);
+            min-height: rem(52);
             background-color: $accent;
             color: #ffffff;
             font-size: rem(14);

@@ -21,6 +21,10 @@
     display: flex;
     justify-content: space-between;
     gap: rem(45);
+
+    @media (max-width: $tablet) {
+        gap: 0;
+    }
 }
 
 .aboutme__history-text {

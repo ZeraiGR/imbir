@@ -22,52 +22,49 @@
 
 .pupular__item {
     max-width: calc(33% - 20px);
+    width: 100%;
 
     &.hide {
         display: none;
     }
 
-    &:nth-child(4),
-    &:nth-child(5) {
-        margin: rem(25) 0 rem(15);
-        max-width: calc(50% - 15px);
-        width: 100%;
+    // &:nth-child(4),
+    // &:nth-child(5) {
+    //     margin: rem(25) 0 rem(15);
+    //     max-width: calc(50% - 15px);
+    //     width: 100%;
 
-        .card__img {
-            min-height: rem(585);
-        }
+    //     .card__img {
+    //         min-height: rem(585);
+    //     }
 
-        @media (max-width: $tablet) {
-            margin: 0;
-            max-width: calc(33% - 20px);
+    //     @media (max-width: $tablet) {
+    //         margin: 0;
+    //         max-width: calc(33% - 20px);
 
-            .card__img {
-                min-height: rem(280);
-                height: rem(280);
-            }
-        }
+    //         .card__img {
+    //             min-height: rem(280);
+    //             height: rem(280);
+    //         }
+    //     }
 
-        @media (max-width: $mobile) {
-            max-width: calc(50% - 15px);
-            width: 100%;
-        }
+    //     @media (max-width: $mobile) {
+    //         max-width: calc(50% - 15px);
+    //         width: 100%;
+    //     }
 
-        @media (max-width: em(525)) {
-            max-width: 100%;
+    //     @media (max-width: em(525)) {
+    //         max-width: 100%;
 
-            .card__img {
-                height: rem(335);
-            }
-        }
-    }
+    //         .card__img {
+    //             height: rem(335);
+    //         }
+    //     }
+    // }
 
     @media (max-width: $tablet) {
         margin: 0;
         max-width: calc(33% - 20px);
-
-        .card__img {
-            height: rem(280);
-        }
     }
 
     @media (max-width: $mobile) {
@@ -77,10 +74,6 @@
 
     @media (max-width: em(525)) {
         max-width: 100%;
-
-        .card__img {
-            height: rem(335);
-        }
     }
 }
 

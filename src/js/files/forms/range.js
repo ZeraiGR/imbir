@@ -13,19 +13,33 @@ export function rangeInit() {
         let textFrom = priceSlider.getAttribute('data-from');
         let textTo = priceSlider.getAttribute('data-to');
         noUiSlider.create(priceSlider, {
-            start: 0, // [0,200000]
-            connect: [true, false],
+            start: [100, 240],
+            connect: true,
             range: {
                 min: [0],
-                max: [200000],
+                max: [500],
             },
+            format: wNumb({
+                decimals: 0,
+                suffix: ' EUR',
+            }),
         });
-        /*
-		const priceStart = document.getElementById('price-start');
-		const priceEnd = document.getElementById('price-end');
-		priceStart.addEventListener('change', setPriceValues);
-		priceEnd.addEventListener('change', setPriceValues);
-		*/
+
+        const priceStart = document.querySelector('.price__number--from');
+        const priceEnd = document.querySelector('.price__number--to');
+        priceStart.addEventListener('change', setPriceValues);
+        priceEnd.addEventListener('change', setPriceValues);
+
+        priceSlider.noUiSlider.on('update', function (values, handle) {
+            var value = values[handle];
+
+            if (handle) {
+                priceEnd.value = value;
+            } else {
+                priceStart.value = value;
+            }
+        });
+
         function setPriceValues() {
             let priceStartValue;
             let priceEndValue;

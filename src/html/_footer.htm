@@ -33,8 +33,12 @@
 				<h3 class="footer__name">Контакты</h3>
 
 				<p class="footer__info">39 Saules iela, Daugavpils, LV-5401</p>
-				<p class="footer__info">+371 24 509 965</p>
-				<p class="footer__info">info@imbirfoodstories.lv</p>
+				<a class="footer__info" href="tel:+37124509965">
+					+371 24 509 965
+				</a>
+				<a class="footer__info" href="mailto:info@imbirfoodstories.lv">
+					info@imbirfoodstories.lv
+				</a>
 			</address>
 
 			<div class="footer__requisites">
@@ -45,22 +49,33 @@
 				<p class="footer__info">Пятницкая, д. 66 стр. 1 эт. 1 пом. 1</p>
 			</div>
 
-			<ul class="socials">
-				<li class="socials__item">
-					<a class="socials__link" href="#">
-						<svg class="socials__icon socials__icon--facebook">
-							<use xlink:href="@img/icons/sprite.svg#icon-facebook"></use>
+			<div class="footer__box">
+				<ul class="socials">
+					<li class="socials__item">
+						<a class="socials__link" href="#">
+							<svg class="socials__icon socials__icon--facebook">
+								<use xlink:href="@img/icons/sprite.svg#icon-facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="socials__item">
+						<a class="socials__link" href="#">
+							<svg class="socials__icon socials__icon--insta">
+								<use xlink:href="@img/icons/sprite.svg#icon-insta"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+
+				<div class="footer__author" data-da=".footer__requisites, 992, 4">
+					<span>Projektējis:</span>
+					<a class="footer__refer" href="http://demo.moremedia.lv/">
+						<svg class="footer__icon">
+							<use xlink:href="@img/icons/sprite.svg#more-logo"></use>
 						</svg>
 					</a>
-				</li>
-				<li class="socials__item">
-					<a class="socials__link" href="#">
-						<svg class="socials__icon socials__icon--insta">
-							<use xlink:href="@img/icons/sprite.svg#icon-insta"></use>
-						</svg>
-					</a>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 </footer>

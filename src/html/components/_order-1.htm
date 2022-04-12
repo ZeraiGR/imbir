@@ -1,0 +1,180 @@
+<section class="order">
+	<div class="order__container order__container--small">
+		<div class="breadcrumbs">
+			<ul>
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li>
+					<span>
+						Оформление заказа
+					</span>
+				</li>
+			</ul>
+		</div>
+
+		<ul class="order__steps">
+			<li class="order__step order__step--active">
+				<span class="order__name">
+					Способ доставки
+				</span>
+			</li>
+			<li class="order__step">
+				<span class="order__name">
+					Способ оплаты
+				</span>
+			</li>
+			<li class="order__step">
+				<span class="order__name">
+					Оформление заказа
+				</span>
+			</li>
+		</ul>
+
+		<h1 class="order__title">
+			Информация о доставке
+		</h1>
+		<p class="order__subtitle">
+			Пожалуйста, введите ваши контактные данные и способ доставки.
+		</p>
+
+		<form class="order__form" action="#">
+			<ul class="order__statuses">
+				<li class="order__status">
+					<label class="order__label">
+						<input class="order__radio sr-only" type="radio" name="status">
+						<div class="order__radio-checker"></div>
+						Индивидуальный
+					</label>
+				</li>
+
+				<li class="order__status">
+					<label class="order__label">
+						<input class="order__radio sr-only" type="radio" name="status" checked>
+						<div class="order__radio-checker"></div>
+						Законопослушный гражданин
+					</label>
+				</li>
+			</ul>
+
+			<ul class="person-info order__person">
+				<li class="person-info__item">
+					<label class="sr-only" for="name">Имя</label>
+					<input class="person-info__field" id="name" name="person-name" type="text" placeholder="Ваше имя *" required>
+				</li>
+
+				<li class="person-info__item">
+					<label class="sr-only" for="second-name">Фамилия</label>
+					<input class="person-info__field" id="second-name" name="person-second-name" type="text"
+						placeholder="Фамилия *" required>
+				</li>
+
+				<li class="person-info__item">
+					<label class="sr-only" for="mail">E-mail</label>
+					<input class="person-info__field" id="mail" name="person-mail" type="email" placeholder="E-mail *" required>
+				</li>
+
+				<li class="person-info__item">
+					<label class="sr-only" for="phone">Телефон</label>
+					<input class="person-info__field" id="phone" name="person-phone" type="tel" placeholder="Телефон *" required>
+				</li>
+			</ul>
+
+			<h2 class="order__heading">
+				Способ доставки:
+			</h2>
+
+			<ul class="order__ways">
+				<li class="order__way order__way--pickup">
+					<label class="order__way-label" for="pickup">
+						<input class="order__way-checkbox sr-only" id="pickup" type="radio" name="delivery" checked>
+						<div class="order__way-checker"></div>
+						<div class="order__way-info order__way-info--pickup">
+							<h3 class="order-way-name">
+								Самовывоз на месте в нашем магазине
+							</h3>
+							<p class="order-way-descr">
+								Даугавпилс, улица Саулес 64
+							</p>
+						</div>
+					</label>
+				</li>
+
+				<li class="order__way order__way--omniva">
+					<label class="order__way-label" for="omniva">
+						<input class="order__way-checkbox sr-only" id="omniva" type="radio" name="delivery">
+						<div class="order__way-checker"></div>
+						<div class="order__way-info order__way-info--omniva">
+							<h3 class="order-way-name">
+								Доставка Омнива
+							</h3>
+						</div>
+					</label>
+				</li>
+
+				<li class="order__way order__way--auto">
+					<label class="order__way-label" for="auto">
+						<input class="order__way-checkbox sr-only" id="auto" type="radio" name="delivery">
+						<div class="order__way-checker"></div>
+						<div class="order__way-info order__way-info--auto">
+							<h3 class="order-way-name">
+								Доставка по указанному адресу
+							</h3>
+							<p class="order-way-descr">
+								Платеж: После подтверждения заказа стоимость доставки будет рассчитана на основе вашего адреса.
+							</p>
+						</div>
+
+						<ul class="person-info">
+							<li class="person-info__item">
+								<label class="sr-only" for="city">Город</label>
+								<input class="person-info__field" id="city" name="person-city" type="text" placeholder="Город">
+							</li>
+
+							<li class="person-info__item">
+								<label class="sr-only" for="street">Улица</label>
+								<input class="person-info__field" id="street" name="person-street" type="text" placeholder="Улица">
+							</li>
+
+							<li class="person-info__item">
+								<label class="sr-only" for="house">Дом</label>
+								<input class="person-info__field" id="house" name="person-house" type="text" placeholder="Дом">
+							</li>
+
+							<li class="person-info__item">
+								<label class="sr-only" for="appartment">Квартира</label>
+								<input class="person-info__field" id="appartment" name="person-appartment" type="text"
+									placeholder="Квартира">
+							</li>
+
+							<li class="person-info__item">
+								<label class="sr-only" for="index">Индекс</label>
+								<input class="person-info__field" id="index" name="person-index" type="text" placeholder="Индекс">
+							</li>
+
+							<li class="person-info__item">
+								<label class="sr-only" for="date">Дата</label>
+								<input class="person-info__field" id="date" name="person-date" type="text"
+									placeholder="Желаемая дата доставки">
+							</li>
+						</ul>
+
+					</label>
+				</li>
+			</ul>
+
+			<ul class="order__btns">
+				<li class="order__btn">
+					<a class="order__link btn" href="#">
+						Назад
+					</a>
+				</li>
+				<li class="order__btn">
+					<a class="order__link order__link--accent btn" href="#">
+						Продолжить
+					</a>
+				</li>
+			</ul>
+		</form>
+	</div>
+</section>

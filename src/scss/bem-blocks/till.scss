@@ -1,0 +1,141 @@
+.till {
+    padding: rem(45) rem(40) rem(25);
+    background-color: #f4f4f4;
+    border-radius: 20px;
+
+    @media (max-width: em(1366)) {
+        padding: rem(40) rem(25) rem(20);
+    }
+
+    @media (max-width: $tablet) {
+        padding: rem(45) rem(30) rem(25);
+    }
+}
+
+.till__btns {
+    margin-bottom: rem(35);
+    display: flex;
+    flex-direction: column;
+    gap: rem(22);
+}
+
+.till__link {
+    padding: rem(16) rem(20) rem(15) rem(20);
+    width: 100%;
+    background-image: none;
+    text-align: center;
+    background-color: transparent;
+    font-size: rem(14);
+    color: $mainColor;
+    border: 1px solid $accent;
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    &--accent {
+        background-color: $accent;
+        color: #ffffff;
+
+        &:hover {
+            background-color: $accent;
+        }
+    }
+}
+
+.till__resume {
+    margin-bottom: rem(25);
+    padding-bottom: rem(10);
+    border-bottom: 1px solid #d6d6d6;
+    display: flex;
+    gap: rem(20);
+    justify-content: space-between;
+    line-height: 1.5;
+}
+
+.till__price {
+    text-align: right;
+}
+
+.till__total {
+    margin-bottom: rem(15);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .till__name {
+        display: block;
+        max-width: 60%;
+        line-height: 1.5;
+
+        span {
+            font-size: rem(14);
+        }
+    }
+
+    .till__price {
+        font-weight: 600;
+        font-size: rem(22);
+        line-height: 1.2;
+    }
+}
+
+.till__taxes {
+    display: flex;
+    flex-direction: column;
+    font-size: rem(13);
+}
+
+.till__tax {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #a9a3a7;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+        margin-bottom: rem(5);
+    }
+}
+
+.till__promo {
+    margin-top: rem(25);
+    margin-bottom: rem(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(8);
+}
+
+.till__input {
+    width: 100%;
+    padding: rem(14) rem(20);
+    min-height: rem(48);
+    background-color: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    outline: transparent;
+
+    &:focus {
+        border-color: $second;
+    }
+
+    &::placeholder {
+        color: #b4b3b3;
+    }
+}
+
+.till__buttom {
+    min-width: rem(48);
+    height: rem(48);
+    background-color: $accent;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.till__submit {
+    width: 100%;
+    background-image: none;
+    font-size: rem(14);
+}

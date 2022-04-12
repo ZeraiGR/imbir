@@ -22,7 +22,7 @@ import '../scss/style.scss';
 import './libs/dynamic_adapt.js';
 
 /* Форматирование чисел */
-// import './libs/wNumb.min.js';
+import './libs/wNumb.min.js';
 
 // Основные модули ========================================================================================================================================================================================================================================================
 import * as flsFunctions from './files/functions.js';
@@ -65,7 +65,7 @@ flsFunctions.spollers();
 Документация по работе в шаблоне:
 Сниппет (HTML): pl
 */
-// flsFunctions.initPopups();
+flsFunctions.initPopups();
 
 /*
 Модуль параллакса мышью
@@ -87,7 +87,7 @@ import * as flsForms from './files/forms/forms.js';
 // flsForms.formMasks();
 
 /* Модуль формы "колличество" */
-// flsForms.formQuantity();
+flsForms.formQuantity();
 
 /* Модуль формы "показать пароль" */
 // flsForms.formViewpass();
@@ -96,7 +96,7 @@ import * as flsForms from './files/forms/forms.js';
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-//flsForms.formSelect();
+flsForms.formSelect();
 
 // Модуль работы с ползунком  ===================================================================================================================================================================================================================================================================================
 /*
@@ -177,3 +177,26 @@ import { headerFixed } from './files/script.js';
 // headerFixed();
 
 //============================================================================================================================================================================================================================================
+
+const charHandler = (selector) => {
+    let chars = document.querySelectorAll(`${selector}`),
+        maxWidth = '',
+        charsArr = [];
+
+    if (chars) {
+        chars = Array.from(chars);
+        chars.forEach((el) => {
+            charsArr.push(el.offsetWidth);
+            console.dir(el.clientWidth);
+        });
+
+        maxWidth = Math.max(...charsArr);
+
+        chars.forEach((el) => {
+            el.style.minWidth = `${maxWidth}px`;
+        });
+    }
+};
+
+charHandler('.product__label');
+// charHandler('.select_product__select');

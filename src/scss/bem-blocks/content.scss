@@ -1,0 +1,63 @@
+.content {
+    padding: rem(10) 0 rem(55);
+    .breadcrumbs {
+        @include adaptiveValue('margin-bottom', 30, 22);
+    }
+
+    @media (max-width: $tablet) {
+        padding: rem(10) 0 rem(45);
+    }
+}
+
+.content__title {
+    @include adaptiveValue('margin-bottom', 70, 45);
+    text-align: center;
+
+    &::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.content__text {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: rem(20) 0;
+        line-height: 1.5;
+    }
+
+    h2 {
+        font-size: rem(20);
+    }
+
+    h3 {
+        font-size: rem(18);
+    }
+
+    p {
+        margin: rem(20) 0;
+        line-height: 1.7;
+        font-size: rem(14);
+    }
+
+    ol,
+    ul {
+        padding-left: rem(20);
+    }
+
+    ul {
+        li {
+            list-style: initial;
+        }
+    }
+
+    li {
+        margin: rem(10) 0;
+        padding: initial;
+        line-height: 1.7;
+        font-size: rem(14);
+    }
+}

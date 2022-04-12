@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			@@include('html/components/_promo.htm',{})
+			@@include('html/components/_product-slider.htm',{
+			"title": "Акции и специальные предложения"
+			})
+			@@include('html/components/_about.htm',{})
+			@@include('html/components/_popular.htm',{})
+			@@include('html/components/_product-slider.htm',{
+			"title": "Товары которые вы можете приобрести только в нашем магазине"
+			})
+			@@include('html/components/_faq.htm',{})
+			@@include('html/components/_newsline-slider.htm',{})
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

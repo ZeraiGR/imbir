@@ -64,6 +64,25 @@ body {
             transform: translateX(0);
         }
     }
+
+    .basket-open & {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            z-index: 6;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(2, 2, 2, 0.5);
+            content: '';
+        }
+
+        .icon-menu {
+            z-index: 5;
+        }
+    }
     // Сайт загружен
     .loaded & {
     }
@@ -155,9 +174,6 @@ body {
 @import 'header';
 @import 'footer';
 
-// Подключение стилей отдельных страниц
-@import 'home';
-
 // Подключение BEM Блоков
 @import 'bem-blocks/card.scss';
 @import 'bem-blocks/product-slider.scss';
@@ -169,9 +185,15 @@ body {
 @import 'bem-blocks/comments.scss';
 @import 'bem-blocks/aboutme.scss';
 @import 'bem-blocks/contact.scss';
+@import 'bem-blocks/quantity.scss';
+@import 'bem-blocks/product.scss';
 @import 'bem-blocks/shop.scss';
-@import 'page/main/promo.scss';
-@import 'page/recipe/recipe.scss';
-@import 'page/recipe/similar.scss';
-@import 'page/main/about.scss';
-@import 'page/main/popular.scss';
+@import 'bem-blocks/bug.scss';
+@import 'bem-blocks/till.scss';
+@import 'bem-blocks/content.scss';
+@import 'bem-blocks/order.scss';
+@import 'bem-blocks/promo.scss';
+@import 'bem-blocks/recipe.scss';
+@import 'bem-blocks/similar.scss';
+@import 'bem-blocks/about.scss';
+@import 'bem-blocks/popular.scss';

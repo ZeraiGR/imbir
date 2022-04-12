@@ -1,5 +1,42 @@
 .faq {
     @include adaptiveValue('margin-bottom', 90, 50);
+
+    .spollers__title {
+        position: relative;
+        margin-bottom: rem(25);
+        padding-left: rem(54);
+        text-align: left;
+        @include adaptiveValue('font-size', 20, 18);
+        line-height: 1.4;
+
+        &._spoller-active {
+            &::before {
+                transform: rotate(180deg) translateY(50%);
+                background-image: url('@img/icons/angle-bottom-white.svg');
+                background-color: $accent;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: rem(40);
+            height: rem(40);
+            border-radius: 50%;
+            background-color: #ffffff;
+            background-image: url('@img/icons/angle-bottom.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.3s ease;
+            content: '';
+        }
+    }
+
+    .spollers__body {
+        line-height: 1.75;
+    }
 }
 
 .faq__container {
@@ -43,46 +80,5 @@
     @media (max-width: $mobile) {
         grid-template-columns: 100%;
         gap: rem(25) rem(50);
-    }
-}
-
-.spollers__title {
-    position: relative;
-    margin-bottom: rem(25);
-    padding-left: rem(54);
-    text-align: left;
-    @include adaptiveValue('font-size', 20, 18);
-    line-height: 1.4;
-
-    &._spoller-active {
-        &::before {
-            transform: rotate(180deg) translateY(50%);
-            background-image: url('@img/icons/angle-bottom-white.svg');
-            background-color: $accent;
-        }
-    }
-
-    &::before {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: rem(40);
-        height: rem(40);
-        border-radius: 50%;
-        background-color: #ffffff;
-        background-image: url('@img/icons/angle-bottom.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: transform 0.3s ease;
-        content: '';
-    }
-}
-
-.spollers__body {
-    line-height: 1.75;
-
-    @media (max-width: $mobile) {
-        text-align: center;
     }
 }

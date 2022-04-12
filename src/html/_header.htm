@@ -39,14 +39,50 @@
 				<a class="menu__link menu__link--shop" href="#" data-da=".menu__mobile, 768, 3">
 					Магазин
 				</a>
-				<a class="menu__link menu__link--basket" href="#">
-					<span class="sr-only">
-						Корзина
-					</span>
-					<span class="menu__counter">
-						2
-					</span>
-				</a>
+				<div class="menu__basket">
+					<button class="menu__link menu__link--basket" type="button">
+						<span class="sr-only">
+							Корзина
+						</span>
+						<span class="menu__counter">
+							2
+						</span>
+					</button>
+					<div class="menu__basket-info">
+						<ul class="menu__basket-list">
+							<li class="menu__basket-item">
+								@@include('components/_card--bug.htm',{
+								"category": "Категория",
+								"discount": "-15%",
+								"link": "#",
+								"images": "img/products/product-2.jpg",
+								"name": "Домашняя паста со шпинатом",
+								"weight": "200 гр",
+								"new": "58 EUR",
+								"old": "65 EUR"
+								})
+							</li>
+							<li class="menu__basket-item">
+								@@include('components/_card--bug.htm',{
+								"category": "Категория",
+								"discount": "-15%",
+								"link": "#",
+								"images": "img/products/product-2.jpg",
+								"name": "Домашняя паста со шпинатом",
+								"weight": "200 гр",
+								"new": "58 EUR",
+								"old": "65 EUR"
+								})
+							</li>
+						</ul>
+						<p class="menu__basket-total">
+							В корзине 5 товаров на сумму 2 300 EUR
+						</p>
+						<a class="menu__basket-btn btn" href="#">
+							Перейти в корзину
+						</a>
+					</div>
+				</div>
 				<span class="menu__price">
 					2 300 EUR
 				</span>

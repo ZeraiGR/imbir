@@ -2,10 +2,14 @@
 
 .footer {
     .socials {
+        margin-bottom: rem(20);
         padding-top: rem(10);
 
         @media (max-width: em(992)) {
+            margin-bottom: 0;
             padding-top: 0;
+            display: flex;
+            justify-content: center;
             order: 2;
         }
     }
@@ -57,9 +61,6 @@
     @include adaptiveValue('margin-bottom', 25, 12);
 }
 
-.footer__link {
-}
-
 .footer__contacts {
     padding-top: rem(10);
 
@@ -71,11 +72,31 @@
 }
 
 .footer__info {
+    display: block;
     font-size: rem(14);
 
     &:not(:last-child) {
         margin-bottom: rem(10);
     }
+}
+
+.footer__author {
+    display: flex;
+    align-items: center;
+
+    span {
+        margin-right: rem(10);
+    }
+
+    @media (max-width: em(992)) {
+        margin-top: rem(25);
+        justify-content: center;
+    }
+}
+
+.footer__icon {
+    max-width: rem(58);
+    height: rem(25);
 }
 
 .footer__requisites {
@@ -86,15 +107,6 @@
         padding-top: 0;
         order: 4;
     }
-}
-
-.socials__item {
-}
-
-.socials__link {
-}
-
-.arrow-top {
 }
 
 //====================================================================================================

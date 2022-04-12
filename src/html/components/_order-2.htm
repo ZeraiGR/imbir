@@ -1,0 +1,118 @@
+<section class="order">
+	<div class="order__container order__container--small">
+		<div class="breadcrumbs">
+			<ul>
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li>
+					<span>
+						Оформление заказа
+					</span>
+				</li>
+			</ul>
+		</div>
+
+		<ul class="order__steps">
+			<li class="order__step order__step--active">
+				<span class="order__name">
+					Способ доставки
+				</span>
+			</li>
+			<li class="order__step order__step--active">
+				<span class="order__name">
+					Способ оплаты
+				</span>
+			</li>
+			<li class="order__step">
+				<span class="order__name">
+					Оформление заказа
+				</span>
+			</li>
+		</ul>
+
+		<h1 class="order__title">
+			Способ оплаты
+		</h1>
+		<p class="order__subtitle">
+			Выберите способ оплаты товара
+		</p>
+
+		<form class="order__form" action="#">
+			<ul class="order__ways">
+				<li class="order__way order__way--card">
+					<label class="order__way-label" for="card">
+						<input class="order__way-checkbox sr-only" id="card" type="radio" name="payment">
+						<div class="order__way-checker"></div>
+						<div class="order__way-info order__way-info--card">
+							<h3 class="order-way-name">
+								Оплата товара платежной картой
+							</h3>
+							<p class="order-way-descr">
+								Оплата картой при получении товара
+							</p>
+						</div>
+					</label>
+				</li>
+
+				<li class="order__way order__way--money">
+					<label class="order__way-label" for="money">
+						<input class="order__way-checkbox sr-only" id="money" type="radio" name="payment">
+						<div class="order__way-checker"></div>
+						<div class="order__way-info order__way-info--money">
+							<h3 class="order-way-name">
+								Оплата товара наличными
+							</h3>
+							<p class="order-way-descr">
+								Оплата наличными при получении товара
+							</p>
+						</div>
+					</label>
+				</li>
+
+				<li class="order__way order__way--transaction">
+					<label class="order__way-label" for="transaction">
+						<input class="order__way-checkbox sr-only" id="transaction" type="radio" name="payment">
+						<div class="order__way-checker"></div>
+						<div class="order__way-info order__way-info--transaction">
+							<h3 class="order-way-name">
+								Оплата товара перечислением
+							</h3>
+							<p class="order-way-descr">
+								Вы получите счет на указанный вами адрес электронной почты
+							</p>
+						</div>
+					</label>
+				</li>
+
+				<li class="order__way order__way--paypal">
+					<label class="order__way-label" for="paypal">
+						<input class="order__way-checkbox sr-only" id="paypal" type="radio" name="payment">
+						<div class="order__way-checker"></div>
+						<div class="order__way-info order__way-info--paypal">
+							<h3 class="order-way-name">
+								Оплата через PayPal
+							</h3>
+							<p class="order-way-descr">
+								Оплата через PayPal
+							</p>
+						</div>
+					</label>
+				</li>
+			</ul>
+
+			<ul class="order__btns">
+				<li class="order__btn">
+					<a class="order__link btn" href="#">
+						Назад
+					</a>
+				</li>
+				<li class="order__btn">
+					<a class="order__link order__link--accent btn" href="#">
+						Продолжить
+					</a>
+				</li>
+			</ul>
+		</form>
+	</div>
+</section>
